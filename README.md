@@ -2,6 +2,9 @@
 
 A clean, minimal note-taking app for React Native (Expo). Two screens, a themable design system, and a small set of focused components — built as a Mobile Dev Cohort assignment.
 
+# Demo Video Link
+https://drive.google.com/file/d/1Xg5qYrqZ5Pi_MNCS7lMuQ2RWb_pxWINr/view?usp=drivesdk
+
 ## Features
 
 - **Create, edit, and delete notes** with a confirmation prompt on delete.
