@@ -72,7 +72,6 @@ const NoteForm = ({
       {/* BG Image Header */}
       <ImageBackground
         style={{ height: height * 0.3 }}
-        alt="note-bg"
         source={require("@/assets/images/note-bg.png")}
       >
         <View style={[formStyles.bgOverlay, { paddingTop: top + 8 }]}>
