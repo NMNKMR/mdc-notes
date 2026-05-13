@@ -137,6 +137,29 @@ const Notes = () => {
             {...item}
           />
         )}
+        ListEmptyComponent={
+          <View style={styles.emptyContainer}>
+            <Ionicons
+              name={
+                debouncedQuery.trim()
+                  ? "search-outline"
+                  : "document-text-outline"
+              }
+              size={56}
+              color={colors.textSecondary}
+            />
+            <Text style={[styles.emptyTitle, { color: colors.textPrimary }]}>
+              {debouncedQuery.trim() ? "No matches" : "No notes yet"}
+            </Text>
+            <Text
+              style={[styles.emptySubtitle, { color: colors.textSecondary }]}
+            >
+              {debouncedQuery.trim()
+                ? `Nothing matches "${debouncedQuery.trim()}". Try a different search.`
+                : "Tap the + button at the bottom-right to add your first note."}
+            </Text>
+          </View>
+        }
         contentContainerStyle={{
           flexGrow: 1,
           paddingHorizontal: isTablet ? 32 : 16,
@@ -224,5 +247,22 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.18,
     shadowRadius: 2.0,
+  },
+  emptyContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 32,
+    paddingVertical: 48,
+    gap: 12,
+  },
+  emptyTitle: {
+    fontSize: 18,
+    fontWeight: 600,
+  },
+  emptySubtitle: {
+    fontSize: 14,
+    lineHeight: 20,
+    textAlign: "center",
   },
 });
